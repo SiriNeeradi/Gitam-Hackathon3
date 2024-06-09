@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="min-h-screen flex items-center justify-center bg-zinc-100 dark:bg-zinc-900">
+      <div class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg flex max-w-4xl w-full">
+        <div class="w-1/2 hidden md:block">
+          <img src="https://eavf3cou74b.exactdn.com/wp-content/uploads/2023/06/28102929/Best-Cameras-for-Professional-Photography-1.jpg?strip=all&lossy=1&ssl=1" alt="Signup Image" class="object-cover h-full w-full rounded-l-lg">
+        </div>
+        <div class="w-full md:w-1/2 p-8">
+          <div class="text-center mb-8">
+            <img src="https://placehold.co/100x50" alt="Logo" class="mx-auto mb-4">
+            <h2 class="text-2xl font-bold text-zinc-800 dark:text-zinc-200">Create an account</h2>
+          </div>
+          <form method="POST" action="{{ url_for('signup') }}">
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1" for="name">Name</label>
+              <input type="text" name="name" id="name" class="w-full p-2 border border-zinc-600 rounded bg-zinc-50 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-200" placeholder="Olivia Wilson">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1" for="email">Email</label>
+              <input type="email" name="email" id="email" class="w-full p-2 border border-zinc-600 rounded bg-zinc-50 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-200" placeholder="hello@reallygreatsite.com">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1" for="password">Password</label>
+              <input type="password" name="password" id="password" class="w-full p-2 border border-zinc-600 rounded bg-zinc-50 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-200" placeholder="********">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1" for="role">Role</label>
+              <select name="role" id="role" class="w-full p-2 border border-zinc-600 rounded bg-zinc-50 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-200">
+                <option value="customer">Customer</option>
+                <option value="photographer">Photographer</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded mb-4">Sign up</button>
+            <p class="text-center text-sm">Already have an account? <a href="{{ url_for('login') }}" class="text-blue-400">Log in</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

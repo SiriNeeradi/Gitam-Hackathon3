@@ -1,0 +1,38 @@
+<!-- photographerdash.html -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="relative min-h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://placehold.co/1920x1080');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center text-center text-white space-y-8 px-8">
+        <h1 class="text-4xl font-bold">Photographer Dashboard</h1>
+        <div class="w-24 h-1 bg-white"></div>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+            <a href="{{ url_for('manage_profile') }}" class="flex items-center justify-center bg-zinc-800 bg-opacity-75 border border-white rounded-lg p-4">
+                <span>Manage Profile</span>
+                <img src="https://placehold.co/32x32" alt="profile" class="w-8 h-8 ml-2">
+            </a>
+            <a href="{{ url_for('view_review') }}" class="flex items-center justify-center bg-zinc-800 bg-opacity-75 border border-white rounded-lg p-4">
+                <span>View Feedback</span>
+                <img src="https://placehold.co/32x32" alt="feedback" class="w-8 h-8 ml-2">
+            </a>
+            <a href="{{ url_for('view_payment') }}" class="flex items-center justify-center bg-zinc-800 bg-opacity-75 border border-white rounded-lg p-4">
+                <span>View Payment</span>
+                <img src="https://placehold.co/32x32" alt="payment" class="w-8 h-8 ml-2">
+            </a>
+            <a href="#" class="flex items-center justify-center bg-zinc-800 bg-opacity-75 border border-white rounded-lg p-4">
+                <span>View Event Orders</span>
+                <img src="https://placehold.co/32x32" alt="orders" class="w-8 h-8 ml-2">
+            </a>
+        </div>
+    </div>
+    <div class="absolute bottom-4 w-full text-center text-white text-sm">
+        <p>Copyright © 2021 Your Company. Design: Shebin p biju</p>
+    </div>
+</div>
+</body>
+</html>
