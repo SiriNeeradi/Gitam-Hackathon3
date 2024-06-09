@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-xl mx-auto p-6 bg-white dark:bg-zinc-800 shadow-md rounded-lg mt-10">
+        <h2 class="text-2xl font-semibold text-center mb-6 text-zinc-800 dark:text-zinc-200">Booking Confirmation Form</h2>
+        <form id="bookingForm">
+            <div class="mb-6">
+                <label class="block text-zinc-700 dark:text-zinc-300 font-bold mb-2">Name<span class="text-red-500">*</span></label>
+                <div class="flex space-x-4">
+                    <input type="text" placeholder="First*" class="w-1/2 p-2 border border-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                    <input type="text" placeholder="Last*" class="w-1/2 p-2 border border-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                </div>
+            </div>
+            <div class="mb-6">
+                <label class="block text-zinc-700 dark:text-zinc-300 font-bold mb-2">Phone<span class="text-red-500">*</span></label>
+                <input type="text" placeholder="### ### ####" class="w-full p-2 border border-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+            </div>
+            <div class="mb-6">
+                <label class="block text-zinc-700 dark:text-zinc-300 font-bold mb-2">Email</label>
+                <input type="email" placeholder="Email" class="w-full p-2 border border-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+            <hr class="my-6">
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-zinc-800 dark:text-zinc-200 mb-4">Event Details</h3>
+                <label class="block text-zinc-700 dark:text-zinc-300 font-bold mb-2">Event Location<span class="text-red-500">*</span></label>
+                <input type="text" placeholder="Event Location*" class="w-full p-2 border border-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 mb-4" required>
+                <label class="block text-zinc-700 dark:text-zinc-300 font-bold mb-2">Event Type<span class="text-red-500">*</span></label>
+                <select class="w-full p-2 border border-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 mb-4" required>
+                    <option value="" disabled selected>Please select</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="hourly-photo-session">Hourly Photo Session</option>
+                </select>
+                <label class="block text-zinc-700 dark:text-zinc-300 font-bold mb-2">Event Date</label>
+                <div class="relative">
+                    <input type="text" id="event-date" placeholder="MM/DD/YYYY" class="w-full p-2 border border-orange-500 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <img src="https://placehold.co/24x24" alt="calendar icon" class="absolute right-2 top-2 cursor-pointer" id="calendar-icon">
+                </div>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700">NEXT</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('calendar-icon').addEventListener('click', function() {
+            const eventDateInput = document.getElementById('event-date');
+            eventDateInput.focus();
+            eventDateInput.click();
+        });
+
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = '/confirm_payment';
+        });
+    </script>
+</body>
+</html>

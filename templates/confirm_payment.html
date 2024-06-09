@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="p-4">
+  <h2 class="text-xl font-bold mb-4">2. Select a payment method</h2>
+  <div class="bg-yellow-100 p-4 rounded mb-4">
+    <p>Get 3% back (₹3.07) + rewards worth ₹2,000 ICICI credit card. <a href="#" class="text-blue-600">Apply now</a>.</p>
+  </div>
+  <div class="mb-4">
+    <label class="block text-sm font-medium mb-1">Your available balance</label>
+    <div class="flex">
+      <input type="text" class="border p-2 flex-grow" placeholder="Enter Code">
+      <button class="bg-blue-500 text-white p-2 ml-2">Apply</button>
+    </div>
+  </div>
+  <div class="mb-4">
+    <label class="block text-sm font-medium mb-1">CREDIT & DEBIT CARDS</label>
+    <div class="flex items-center mb-2">
+      <input type="radio" name="payment-method" class="mr-2">
+      <div class="flex-grow">
+        <p>State Bank of India Debit Card ending in 6707</p>
+      </div>
+      
+    </div>
+  </div>
+  <div class="mb-4">
+    <label class="block text-sm font-medium mb-1">Another payment method</label>
+    <div class="border p-4 rounded mb-2">
+      <div class="flex items-center mb-2">
+        <input type="radio" name="payment-method" class="mr-2">
+        <div class="flex-grow">
+          <p>Credit or debit card</p>
+          <div class="flex space-x-2">
+            <img src="https://placehold.co/40x20" alt="Visa">
+            <img src="https://placehold.co/40x20" alt="MasterCard">
+            <img src="https://placehold.co/40x20" alt="American Express">
+            <img src="https://placehold.co/40x20" alt="Discover">
+            <img src="https://placehold.co/40x20" alt="PayPal">
+          </div>
+        </div>
+      </div>
+      <button id="enter-card-details" class="text-blue-600">Enter card details</button>
+      <p class="text-xs mt-2">Amazon accepts all major credit & cards</p>
+    </div>
+    <div class="flex items-center">
+      <input type="radio" name="payment-method" class="mr-2">
+      <p>Cash on Delivery/Pay on Delivery</p>
+    </div>
+  </div>
+  <button class="bg-yellow-500 text-black p-2 rounded">Use this payment method</button>
+</div>
+<div id="card-details-modal" class="fixed inset-0 bg-zinc-600 bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded shadow-lg w-96">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-lg font-bold">Enter card details</h3>
+      <button id="close-modal" class="text-zinc-500">&times;</button>
+    </div>
+    <div class="mb-4">
+      <label class="block text-sm font-medium mb-1">Card number</label>
+      <input type="text" class="border p-2 w-full">
+    </div>
+    <div class="mb-4">
+      <label class="block text-sm font-medium mb-1">Nickname</label>
+      <input type="text" class="border p-2 w-full" value="Neeradichandrashekar">
+    </div>
+    <div class="mb-4">
+      <label class="block text-sm font-medium mb-1">Expiry date</label>
+      <div class="flex space-x-2">
+        <select class="border p-2">
+          <option>01</option>
+          <option>02</option>
+        </select>
+        <select class="border p-2">
+          <option>2024</option>
+          <option>2025</option>
+        </select>
+      </div>
+    </div>
+    <div class="mb-4">
+      <label class="block text-sm font-medium mb-1">CVV</label>
+      <input type="password" class="border p-2 w-full">
+    </div>
+    <div class="flex justify-between items-center">
+      <button id="cancel-modal" class="bg-zinc-300 text-black p-2 rounded">Cancel</button>
+      <button class="bg-yellow-500 text-black p-2 rounded">Enter card details</button>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('enter-card-details').addEventListener('click', function() {
+    document.getElementById('card-details-modal').classList.remove('hidden');
+  });
+
+  document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('card-details-modal').classList.add('hidden');
+  });
+
+  document.getElementById('cancel-modal').addEventListener('click', function() {
+    document.getElementById('card-details-modal').classList.add('hidden');
+  });
+</script>
+  </body>
+</html>

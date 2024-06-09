@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Photographers</title>
+</head>
+<body>
+  <div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Photographers</h1>
+    <div class="space-y-4">
+      <div class="flex items-center p-4 bg-white shadow rounded-lg">
+        <img src="https://placehold.co/100x100" alt="Photographer 1" class="w-24 h-24 mr-4">
+        <div class="flex-1">
+          <h2 class="text-xl font-semibold">Photographer 1</h2>
+          <p>Hours Booked: 10</p>
+          <p>Price: $500</p>
+        </div>
+        <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg" onclick="bookNow()">Book Now</button>
+      </div>
+      <div class="flex items-center p-4 bg-white shadow rounded-lg">
+        <img src="https://placehold.co/100x100" alt="Photographer 2" class="w-24 h-24 mr-4">
+        <div class="flex-1">
+          <h2 class="text-xl font-semibold">Photographer 2</h2>
+          <p>Hours Booked: 8</p>
+          <p>Price: $400</p>
+        </div>
+        <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg" onclick="bookNow()">Book Now</button>
+      </div>
+      <div class="flex items-center p-4 bg-white shadow rounded-lg">
+        <img src="https://placehold.co/100x100" alt="Photographer 3" class="w-24 h-24 mr-4">
+        <div class="flex-1">
+          <h2 class="text-xl font-semibold">Photographer 3</h2>
+          <p>Hours Booked: 12</p>
+          <p>Price: $600</p>
+        </div>
+        <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg" onclick="bookNow()">Book Now</button>
+      </div>
+      <div class="flex items-center p-4 bg-white shadow rounded-lg">
+        <img src="https://placehold.co/100x100" alt="Photographer 4" class="w-24 h-24 mr-4">
+        <div class="flex-1">
+          <h2 class="text-xl font-semibold">Photographer 4</h2>
+          <p>Hours Booked: 15</p>
+          <p>Price: $750</p>
+        </div>
+        <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg" onclick="bookNow()">Book Now</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function bookNow() {
+      window.location.href = '/confirm_booking';
+    }
+  </script>
+</body>
+</html>
